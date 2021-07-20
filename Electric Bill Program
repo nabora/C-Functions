@@ -1,0 +1,54 @@
+#include <stdio.h>
+#include <string.h>
+
+void main()
+{
+    int cus_ID, unit_cons, amt, total_amt;
+    float charge, sur_charge=0;
+    
+    
+ 
+    printf("Input Costumer ID: ");
+    scanf("%d", & cus_ID);
+    printf("Input Unit Consumed:");
+    scanf("%d", & unit_cons);
+ 
+ 
+
+    if (unit_cons > 199)
+    {
+    charge = 1.50;
+    }
+    else if (unit_cons = 250 && unit_cons < 4000)
+    {
+    charge = 1.60;
+    }
+    else if (unit_cons >= 450 && unit_cons < 600)
+    {
+    charge = 1.85;
+    }
+    else
+    {
+    charge = 2.00;
+    }
+   
+    amt = unit_cons * charge;
+
+
+    if (amt>400);{
+        sur_charge = amt * 0.10;}
+
+    total_amt = amt + sur_charge;
+    if (total_amt<100);{
+        total_amt >= 100;}
+
+
+    printf("\n[Electricity Bill]\n");
+    printf("Costumer ID: %d\n", cus_ID);
+    printf("Unit Consumed: %d\n", unit_cons);
+    printf("Amount Charges @ Rs. %4.2f per unit:%8.2d\n", charge,amt);
+    printf("Surcharge Amount:%8.2f\n", sur_charge);
+    printf("Total costumer Bill:%8.2d\n", total_amt);
+
+    return;
+}
